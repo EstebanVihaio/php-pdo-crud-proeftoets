@@ -70,7 +70,7 @@
     <title>RichestPeople</title>
 </head>
 <body>
-    <h3>Persoonsgegevens</h3>
+    <h3>De vijf rijkste mensen ter wereld</h3>
     <table border='1'>
         <thead>
             <th>Naam</th>
