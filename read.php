@@ -22,11 +22,12 @@
  * Maak een select query die alle records uit de tabel Persoon haalt
  */
   $sql = "SELECT Id
-                ,Voornaam
-                ,Tussenvoegsel
-                ,Achternaam
-                ,Haarkleur
-          FROM Persoon";
+                ,Name
+                ,Networth
+                ,Age
+                ,MyCompagny
+          FROM RichestPeople
+          ORDER BY Networth DESC";
 
   // Maak de sql-query gereed om te worden uitgevoerd op de database
   $statement = $pdo->prepare($sql);
@@ -44,18 +45,13 @@
   foreach ($result as $info) {
     $rows .= "<tr>
                 <td>$info->Id</td>
-                <td>$info->Voornaam</td>
-                <td>$info->Tussenvoegsel</td>
-                <td>$info->Achternaam</td>
-                <td>$info->Haarkleur</td>
+                <td>$info->Name</td>
+                <td>$info->Networth</td>
+                <td>$info->Age</td>
+                <td>$info->MyCompagny</td>
                 <td>
                     <a href='delete.php?Id=$info->Id'>
                         <img src='img/b_drop.png' alt='kruis'>
-                    </a>
-                </td>
-                <td>
-                    <a href='update.php?Id=$info->Id'>
-                        <img src='img/b_edit.png' alt='potlood'>
                     </a>
                 </td>
               </tr>";
