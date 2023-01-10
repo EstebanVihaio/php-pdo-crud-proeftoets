@@ -44,7 +44,6 @@
   $rows = "";
   foreach ($result as $info) {
     $rows .= "<tr>
-                <td>$info->Id</td>
                 <td>$info->Name</td>
                 <td>$info->Networth</td>
                 <td>$info->Age</td>
@@ -68,25 +67,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RichestPeople</title>
 </head>
 <body>
     <h3>Persoonsgegevens</h3>
-
-    <a href="index.php">
-        <input type="button" value="Nieuw record">
-    </a>
-    <br>
-    <br>
     <table border='1'>
         <thead>
-            <th>Id</th>
-            <th>Voornaam</th>
-            <th>Tussenvoegsel</th>
-            <th>Achternaam</th>
-            <th>Haarkleur</th>
-            <th></th>
-            <th></th>
+            <th>Naam</th>
+            <th>Vermogen</th>
+            <th>Leeftijd</th>
+            <th>Bedrijf</th>
+            <th>Delete</th>
         </thead>
         <tbody>
             <?= $rows; ?>
